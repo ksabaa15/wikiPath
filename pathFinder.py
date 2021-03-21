@@ -68,8 +68,8 @@ def findPath(urlStart, urlEnd):
     endPage = wikipediaPage(urlEnd, None)
     visited = set()
     queue=[startPage]
-    i=1
-    while i>0:
+
+    while True:
         for page in queue:
             if page == endPage:
                 print(getPast(page))
@@ -80,8 +80,11 @@ def findPath(urlStart, urlEnd):
             continue
         
         visited.add(page.getNameFromUrl())
+        for child in page.getChildren():
+            if child == endPage:
+                print(getPast(child))
+                return 
         queue.extend(page.getChildren())
-        i = len(queue)
    
     
 
