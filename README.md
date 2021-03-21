@@ -1,6 +1,6 @@
 ## Wikipedia Scrapper
 
-Given two english wikipedia pages url, it looks for a path between the two through clickable links.
+Given two english wikipedia pages url, it looks for a path between the two, through clickable links.
 It implements a BFS algorithm.
 
 #### Instruction to run
@@ -11,5 +11,4 @@ It implements a BFS algorithm.
 
 ``` python pathFinder.py https://en.wikipedia.org/wiki/Mahatma_Gandhi https://en.wikipedia.org/wiki/United_States ```
 
-It outputs the text of the clickable links to click to go from source page to destination page.
-It performs very poorly if more than two clicks needed.
+It output the text of the clickable links path. The complexity of the implemented algorithm makes it performs poorly if more than two clicks needed.
